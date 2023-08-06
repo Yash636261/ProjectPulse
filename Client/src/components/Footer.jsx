@@ -1,7 +1,7 @@
 
 function Footer() {
   return (
-    <div className='bg-slate-900 text-white px-5 py-10 flex flex-col'>
+    <div className='bg-black text-white px-5 py-10 flex flex-col'>
 
 
         
@@ -15,7 +15,7 @@ function Footer() {
                 <p className=" text-sm font-normal">Empowering Teams with Seamless Project Management</p>
         </div>
 
-        <div className=' bg-slate-900 text-white text-sm py-5'>
+        <div className='text-sm py-5'>
             <div className='capitalize'>
                 <div className='my-2 mx-3 hover:text-gray-400'>Home</div>
                 <div className='my-2 mx-3 hover:text-gray-400'>about</div>
@@ -24,7 +24,7 @@ function Footer() {
             </div>
         </div>
 
-        <div className=' bg-slate-900 text-white text-sm py-5'>
+        <div className='text-sm py-5'>
             <div className='capitalize'>
                 <div className='my-2 mx-3 hover:text-gray-400'>Home</div>
                 <div className='my-2 mx-3 hover:text-gray-400'>about</div>

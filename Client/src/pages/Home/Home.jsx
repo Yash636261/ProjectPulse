@@ -4,7 +4,7 @@ import Hero from './components/Hero'
 
 function Home() {
   return (
-    <Element id='home' className=' px-5 bg-slate-800'>
+    <Element id='home' className=' px-5 bg-slate-900'>
     <div className='min-h-screen'>
       <Hero/>
     </div>
