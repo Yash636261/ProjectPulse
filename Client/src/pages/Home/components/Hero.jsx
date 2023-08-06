@@ -11,22 +11,22 @@ function Hero() {
 
             {/* introduction */}
 
-            <p className="font-bold text-border text-3xl mb-3 tracking-wide">
+            <p className="font-bold text-border text-3xl lg:text-5xl mb-3 tracking-wide">
               ProjectPulse
             </p>
-            <p className="text-md mb-10">
+            <p className="text-md lg:text-lg mb-10">
             Empowering Teams with Seamless Project Management
             </p>
             <a
               href=""
-              className="bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105"
+              className="bg-blue-500 hover:bg-blue-600 text-sm lg:text-lg text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105"
             >
               Get Started
             </a>
             </div>
           {/* Profile Picture in hero */}
 
-          <div className=" flex max-w-lg justify-end items-cover py-20">
+          <div className=" flex max-w-lg max-lg:max-w-sm justify-end items-cover py-20">
             <img
               className=" border-0 object-contain"
               src={heroimage}
