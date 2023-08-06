@@ -7,6 +7,8 @@ function Navbar() {
     const changeToggle=()=>{
         setToggle(!toggle);
     }
+
+
   return (
     <div className='fixed w-full'>
         <div className='px-5 flex justify-between items-center bg-black text-white h-12'>
@@ -14,12 +16,12 @@ function Navbar() {
             <img className='h-5 w-5 mx-2 my-auto' src="https://img.icons8.com/?size=512&id=104233&format=png" alt="" />
             <p className='my-auto'>ProjectPulse</p>
         </div>
-        <div className='font-semibold max-md:hidden'>
-            <div className='flex justify-center'>
-                <div className='mx-3 hover:font-bold hover:text-blue-300'>Home</div>
-                <div className='mx-3 hover:font-bold hover:text-blue-300'>about </div>
-                <div className='mx-3 hover:font-bold hover:text-blue-300'>contact us</div>
-                <div className='mx-3 hover:font-bold hover:text-blue-300'>explore</div>
+        <div className='font-semibold capitalize max-md:hidden'>
+            <div className='flex justify-center cursor-pointer'>
+                <div className='mx-3 hover:text-blue-300'>Home</div>
+                <div className='mx-3 hover:text-blue-300'>about </div>
+                <div className='mx-3 hover:text-blue-300'>contact us</div>
+                <div className='mx-3 hover:text-blue-300'>explore</div>
             </div>
         </div>
         <div className='flex'> 
@@ -38,19 +40,15 @@ function Navbar() {
         </div>
         </div>
 { toggle && (
-        <div className='absolute w-full bg-gray-900 text-white font-semibold md:hidden py-5'>
-            <div className=''>
-                <div className='mx-3 hover:font-bold hover:text-blue-300'>Home</div>
-                <div className='mx-3 hover:font-bold hover:text-blue-300'>about </div>
-                <div className='mx-3 hover:font-bold hover:text-blue-300'>contact us</div>
-                <div className='mx-3 hover:font-bold hover:text-blue-300'>explore</div>
+        <div className='absolute w-full bg-slate-800 text-white font-semibold md:hidden py-5'>
+            <div className='capitalize'>
+                <div className='mx-3 hover:text-blue-300'>Home</div>
+                <div className='mx-3 hover:text-blue-300'>about</div>
+                <div className='mx-3 hover:text-blue-300'>contact us</div>
+                <div className='mx-3 hover:text-blue-300'>explore</div>
             </div>
         </div>
-
-)
-
-}
-
+)}
     </div>
   )
 }
