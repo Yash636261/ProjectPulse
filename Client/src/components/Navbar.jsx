@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { Link } from "react-scroll/modules";
 
 function Navbar() {
 
@@ -10,7 +11,7 @@ function Navbar() {
 
 
   return (
-    <div className='fixed w-full'>
+    <div className='fixed w-full z-10'>
         <div className='px-5 flex justify-between items-center bg-black text-white h-12'>
         <div className='flex font-bold cursor-default'>
             <img className='h-5 w-5 mx-2 my-auto' src="https://img.icons8.com/?size=512&id=104233&format=png" alt="" />
@@ -18,10 +19,11 @@ function Navbar() {
         </div>
         <div className='font-semibold capitalize max-md:hidden'>
             <div className='flex justify-center cursor-pointer'>
-                <div className='mx-3 hover:text-blue-300'>Home</div>
-                <div className='mx-3 hover:text-blue-300'>about </div>
-                <div className='mx-3 hover:text-blue-300'>contact us</div>
-                <div className='mx-3 hover:text-blue-300'>explore</div>
+                <Link 
+                    title="home page" aria-current="page" to="home" spy={true} smooth={true} offset={-70} duration={500} className='mx-3 hover:text-blue-300'>Home</Link>
+                <Link className='mx-3 hover:text-blue-300'>about </Link>
+                <Link className='mx-3 hover:text-blue-300'>contact us</Link>
+                <Link className='mx-3 hover:text-blue-300'>explore</Link>
             </div>
         </div>
         <div className='flex'> 
@@ -41,11 +43,11 @@ function Navbar() {
         </div>
 { toggle && (
         <div className='absolute w-full bg-slate-800 text-white font-semibold md:hidden py-5'>
-            <div className='capitalize'>
-                <div className='mx-3 hover:text-blue-300'>Home</div>
-                <div className='mx-3 hover:text-blue-300'>about</div>
-                <div className='mx-3 hover:text-blue-300'>contact us</div>
-                <div className='mx-3 hover:text-blue-300'>explore</div>
+            <div className='capitalize flex flex-col'>
+                <Link className='mx-3 my-1 hover:text-blue-300'>Home</Link>
+                <Link className='mx-3 my-1 hover:text-blue-300'>about </Link>
+                <Link className='mx-3 my-1 hover:text-blue-300'>contact us</Link>
+                <Link className='mx-3 my-1 hover:text-blue-300'>explore</Link>
             </div>
         </div>
 )}
