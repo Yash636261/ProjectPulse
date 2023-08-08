@@ -25,9 +25,7 @@ function Navbar() {
         <div className="font-semibold capitalize max-md:hidden">
           <div className="flex justify-center cursor-pointer">
             <Link to="/" className="mx-3 hover:text-blue-300">Home</Link>
-            <div className="mx-3 hover:text-blue-300">
-              about
-            </div>
+            <Link to='/about' className="mx-3 hover:text-blue-300">about</Link>
             <div className="mx-3 hover:text-blue-300">contact us</div>
             <div className="mx-3 hover:text-blue-300">explore</div>
           </div>
@@ -115,7 +113,7 @@ function Navbar() {
           </div>
 
           {menu && (
-            <div className="absolute top-16 right-5 p-5 border-0 rounded-lg bg-black">
+            <div className="absolute top-16 right-5 p-5 border-0 rounded-lg bg-black z-10">
               <div className="flex flex-col border-b-2 py-1 break-normal border-gray-500">
                 <p>UserName</p>
                 <p>UserName@gmail.com</p>
@@ -133,8 +131,8 @@ function Navbar() {
       {toggle && (
         <div className="absolute w-full bg-slate-800 text-white font-semibold md:hidden py-5">
           <div className="capitalize flex flex-col">
-            <div className="mx-3 my-1 hover:text-blue-300">Home</div>
-            <div className="mx-3 my-1 hover:text-blue-300">about </div>
+            <Link to="/" className="mx-3 my-1 hover:text-blue-300">Home</Link>
+            <Link to='/about' className="mx-3 my-1 hover:text-blue-300">about </Link>
             <div className="mx-3 my-1 hover:text-blue-300">contact us</div>
             <div className="mx-3 my-1 hover:text-blue-300">explore</div>
           </div>

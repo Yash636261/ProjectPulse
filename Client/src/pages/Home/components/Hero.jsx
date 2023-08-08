@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import heroimage from '../assets/heroimage.gif'
 function Hero() {
@@ -17,14 +18,15 @@ function Hero() {
             <p className="text-md lg:text-lg mb-10">
             Empowering Teams with Seamless Project Management
             </p>
-            <a
-              href=""
+            <Link
+              to='/login'
               className="bg-blue-500 hover:bg-blue-600 text-sm lg:text-lg text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:scale-105"
             >
-              Get Started
-            </a>
+              LogIn
+            </Link>
             </div>
-          {/* Profile Picture in hero */}
+
+          {/* Hero image */}
 
           <div className=" flex max-w-lg max-lg:max-w-sm justify-end items-cover py-20">
             <img

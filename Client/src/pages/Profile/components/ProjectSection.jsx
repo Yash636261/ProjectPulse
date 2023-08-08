@@ -32,6 +32,22 @@ function ProjectSection() {
             <h1 className="font-bold text-lg">Project 1</h1>
             <p>this project is about something crazy so im very much exited.</p>
           </div>
+          <div className="bg-slate-700 hover:bg-slate-600 border-0 rounded-lg py-5 px-3 my-1">
+            <h1 className="font-bold text-lg">Project 1</h1>
+            <p>this project is about something crazy so im very much exited.</p>
+          </div>
+          <div className="bg-slate-700 hover:bg-slate-600 border-0 rounded-lg py-5 px-3 my-1">
+            <h1 className="font-bold text-lg">Project 1</h1>
+            <p>this project is about something crazy so im very much exited.</p>
+          </div>
+          <div className="bg-slate-700 hover:bg-slate-600 border-0 rounded-lg py-5 px-3 my-1">
+            <h1 className="font-bold text-lg">Project 1</h1>
+            <p>this project is about something crazy so im very much exited.</p>
+          </div>
+          <div className="bg-slate-700 hover:bg-slate-600 border-0 rounded-lg py-5 px-3 my-1">
+            <h1 className="font-bold text-lg">Project 1</h1>
+            <p>this project is about something crazy so im very much exited.</p>
+          </div>
         </div>
   )
 }

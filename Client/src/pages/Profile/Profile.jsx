@@ -4,7 +4,7 @@ import TasksSection from "./components/TasksSection";
 
 function Profile() {
 
-    const [sectionA,setSectionA] = useState(false);
+    const [sectionA,setSectionA] = useState(true);
     const [sectionB,setSectionB] = useState(false);
 
 
