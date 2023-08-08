@@ -1,7 +1,7 @@
-import React from 'react'
+
 import {Link} from 'react-router-dom'
 
-import heroimage from '../assets/heroimage.gif'
+import heroimage from '../../../assets/heroimage.gif'
 function Hero() {
   return (
     <div className='bg-slate-900 text-white lg:min-h-screen'>
