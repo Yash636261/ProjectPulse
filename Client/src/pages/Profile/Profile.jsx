@@ -19,7 +19,7 @@ function Profile() {
     
 
   return (
-    <div className="flex max-lg:flex-col justify-between bg-slate-700 py-20 text-white min-h-screen px-5">
+    <div className="flex max-lg:flex-col justify-between bg-slate-900 py-20 text-white min-h-screen px-5">
       <div className=" md:w-1/5 mx-auto">
         <div className="flex flex-col items-center mx-auto w-full mb-8">
           <img

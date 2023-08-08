@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login/login";
 import Profile from "./pages/Profile/Profile";
 import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="/about" element={<About/>}></Route>
+          <Route path="/contact" element={<Contact/>}></Route>
         </Routes>
         <Footer/>
       </div>

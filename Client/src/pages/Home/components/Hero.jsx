@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import heroimage from '../assets/heroimage.gif'
 function Hero() {
   return (
-    <div className='bg-slate-600 text-white lg:min-h-screen'>
+    <div className='bg-slate-900 text-white lg:min-h-screen'>
         <div className=" relative max-lg:flex justify-centeritems-center mx-auto max-w-4xl py-10">
         <div className="flex  max-lg:flex-col-reverse mx-auto text-light lg:min-h-screen">
            

@@ -14,7 +14,7 @@ const FeatureCard = ({ title, description , image }) => {
 
 const About = () => {
   return (
-    <div className='bg-slate-800 text-white py-20'>
+    <div className='bg-slate-900 text-white py-20'>
     <div className="p-8 shadow-lg py-20 px-5 max-w-5xl mx-auto">
       <h2 className="text-4xl font-bold text-white mb-6">About ProjectPulse</h2>
       <p className="text-white text-lg mb-6 max-w-3xl">

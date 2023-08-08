@@ -3,7 +3,7 @@ import login from "./assets/Login.png";
 
 function Login() {
   return (
-    <div className="flex justify-center items-center bg-slate-700 text-white min-h-screen py-20 ">
+    <div className="flex justify-center items-center bg-slate-800 text-white min-h-screen py-20 ">
       <div className="flex justify-around items-center max-w-5xl">
         <div className="max-lg:hidden">
           <img src={login} alt="" />
