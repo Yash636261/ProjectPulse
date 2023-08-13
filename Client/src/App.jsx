@@ -7,6 +7,7 @@ import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import NewProject from "./pages/NewProject/NewProject";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="/about" element={<About/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
+          <Route path="/newproject" element={<NewProject/>}></Route>
         </Routes>
         <Footer/>
       </div>

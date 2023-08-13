@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function ProjectSection() {
   return (
@@ -22,9 +23,9 @@ function ProjectSection() {
               </button>
             </div>
             <div className="font-bold ">
-              <button className="p-2 border-0 rounded-lg bg-yellow-400 hover:bg-yellow-300">
+              <Link to='/newproject' className="p-2 border-0 rounded-lg bg-yellow-400 hover:bg-yellow-300">
                 New Project
-              </button>
+              </Link>
             </div>
           </div>
 
