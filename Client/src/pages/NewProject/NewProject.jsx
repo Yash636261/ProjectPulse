@@ -8,7 +8,7 @@ function NewProject() {
         </div>
 
 <div className='max-w-3xl mx-auto bg-slate-800 py-10 px-5 border-0 rounded-lg my-10'>
-        <form className=" mx-auto">
+        <form className=" mx-auto ">
 
             <label className='block mb-2 font-semibold text-base'>
                 Project Name
@@ -22,10 +22,28 @@ function NewProject() {
                 value=""
                 onChange=""
                 id="email-address-icon"
-                className=" border text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-100 border-gray-300  focus:ring-blue-500 focus:border-blue-500"
+                className="text-black border text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-100 border-gray-300  focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Project name"
               />
             </div>
+
+            <label className='block mb-2 font-semibold text-base mt-5'>
+                Description
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                </div>
+              <input
+                type="text"
+                name="ProjectName"
+                onChange=""
+                id="email-address-icon"
+                className="text-black  border text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-100 border-gray-300  focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Description"
+              />
+            </div>
+
+        
             <label
               htmlFor="email-address-icon"
               className="block mb-2 mt-5 font-semibold text-base"
@@ -51,7 +69,7 @@ function NewProject() {
                 value=""
                 onChange=""
                 id="email-address-icon"
-                className=" border text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-100 border-gray-300  focus:ring-blue-500 focus:border-blue-500"
+                className="text-black  border text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-100 border-gray-300  focus:ring-blue-500 focus:border-blue-500"
                 placeholder="name@mail.com"
               />
             </div>
