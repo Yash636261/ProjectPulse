@@ -5,6 +5,10 @@ const projectAdminSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    email:{
+        type: String,
+        required: true,
+    },
     idNumber:{
         type: String,
         required: true,

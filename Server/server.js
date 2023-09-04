@@ -3,6 +3,7 @@ require('dotenv').config()
 
 const express = require('express');
 const app = express();
+const ProjectRouter = require('./routes/ProjectRoutes');
 
 const connectDB = require('./db/connect')
 
@@ -16,6 +17,8 @@ app.use(express.json())
 app.get('/', (req, res) => {
   res.send('<h1>Hello from the server!</h1> <a href="/api/v1/products">products route</a>');
 });
+
+app.use("/api/project",ProjectRouter);
 
 app.use(notFoundMiddleware)
 app.use(errorMiddleware)
