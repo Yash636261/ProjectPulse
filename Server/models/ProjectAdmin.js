@@ -20,7 +20,7 @@ const ProjectsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    ProjectDesc: {
+    projectDesc: {
         type: String,
         required: true
     }
