@@ -11,6 +11,18 @@ const projectAdminSchema = new mongoose.Schema({
     }
 })
 
-const Admin = mongoose.model("Admin",projectAdminSchema);
+const ProjectsSchema = new mongoose.Schema({
+    projectName: {
+        type: String,
+        required: true
+    },
+    ProjectDesc: {
+        type: String,
+        required: true
+    }
+})
 
-module.exports = Admin;
+const Admin = mongoose.model("Admin",projectAdminSchema);
+const Project = mongoose.model("Project",ProjectsSchema);
+
+module.exports = {Admin,Project};
