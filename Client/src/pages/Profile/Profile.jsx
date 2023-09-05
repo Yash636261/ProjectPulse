@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import ProjectSection from "./components/ProjectSection";
 import TasksSection from "./components/TasksSection";
 
@@ -6,6 +6,13 @@ function Profile() {
 
     const [sectionA,setSectionA] = useState(true);
     const [sectionB,setSectionB] = useState(false);
+
+
+
+
+
+
+
 
 
     const changeSectionA =()=>{

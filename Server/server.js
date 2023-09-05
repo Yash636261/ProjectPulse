@@ -3,6 +3,7 @@ require('dotenv').config()
 
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const ProjectRouter = require('./routes/ProjectRoutes');
 
 const connectDB = require('./db/connect')
@@ -11,6 +12,7 @@ const notFoundMiddleware = require('./middleware/not-found')
 const errorMiddleware = require('./middleware/error-handeler')
 
 //middleware
+app.use(cors());
 app.use(express.json())
 
 //routes
