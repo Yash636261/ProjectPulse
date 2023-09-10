@@ -23,6 +23,10 @@ const ProjectsSchema = new mongoose.Schema({
     projectDesc: {
         type: String,
         required: true
+    },
+    projectTask: {
+        type: Array,
+        required: false
     }
 })
 

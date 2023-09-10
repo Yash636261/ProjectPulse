@@ -11,11 +11,12 @@ exports.getAllProjects = async (req, res) => {
 
 exports.addProject = async (req, res) => {
   try {
-    const { projectName, projectDesc } = req.body;
+    const { projectName, projectDesc, projectTask } = req.body;
 
     const newProject = new Project({
       projectName,
       projectDesc,
+      projectTask
     });
 
     const savedSubject = await newProject.save();
@@ -29,7 +30,7 @@ exports.addProject = async (req, res) => {
 exports.updateProject = async (req, res) => {
   try {
     const { _id } = req.params;
-    const { projectName, projectDesc } = req.body;
+    const { projectName, projectDesc} = req.body;
 
     // Check if the project exists
     const existingProject = await Project.findById(_id);

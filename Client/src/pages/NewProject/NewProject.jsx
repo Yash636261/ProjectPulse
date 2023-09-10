@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NewProject() {
-
   const [formData, setFormData] = useState({
     projectName: "",
-    projectDesc: "" 
+    projectDesc: "",
   });
-  const [Error , setError] = useState();
+  const [errors, setError] = useState({});
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -17,18 +17,18 @@ function NewProject() {
     }));
   };
 
-  const validateForm = () =>{
-    const newErrors ={};
-    if(!formData.projectName.trim()){
-      newErrors.projectName = 'project name is required.'
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.projectName.trim()) {
+      newErrors.projectName = "project name is required.";
     }
-    if(!formData.projectDesc.trim()){
-      newErrors.projectDesc ="project description required."
+    if (!formData.projectDesc.trim()) {
+      newErrors.projectDesc = "project description required.";
     }
     setError(newErrors);
 
     return Object.keys(newErrors).length === 0;
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
@@ -39,19 +39,22 @@ function NewProject() {
 
     try {
       // Make an Axios POST request to your backend API endpoint
-      const response = await axios.post('http://localhost:5000/api/project/addproject', formData);
+      const response = await axios.post(
+        "http://localhost:5000/api/project/addproject",
+        formData
+      );
 
       // If the request is successful, you can handle the response data here
-      console.log('Project added:', response.data);
+      console.log("Project added:", response.data);
 
       // Clear the form fields after successful submission (optional)
       setFormData({
-        projectName: '',
-        projectDesc: '',
+        projectName: "",
+        projectDesc: "",
       });
     } catch (error) {
       // Handle any errors that occur during the request
-      console.error('Error adding project:', error);
+      console.error("Error adding project:", error);
     }
   };
   return (
@@ -62,27 +65,27 @@ function NewProject() {
 
       <div className="max-w-3xl mx-auto bg-slate-800 py-10 px-5 border-0 rounded-lg my-10">
         <form className=" mx-auto ">
-          <label className="block mb-2 font-semibold text-base" htmlFor="projectName">
+          <label
+            className="block mb-2 font-semibold text-base"
+            htmlFor="projectName"
+          >
             Project Name
           </label>
-          {/* {Error.projectName && (
-          <p>{Error.projectName}</p>
-
-          )} */}
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"></div>
             <input
-  type="text"
-  name="projectName"
-  id="projectName"
-  value={formData.projectName}
-  onChange={handleInputChange}
-  className="text-black border text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-  placeholder="Project name"
-/>
-
-
+              type="text"
+              name="projectName"
+              id="projectName"
+              value={formData.projectName}
+              onChange={handleInputChange}
+              className="text-black border text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Project name"
+            />
           </div>
+          {errors.projectName && (
+            <p className="text-red-500">{errors.projectName}</p>
+          )}
 
           <label className="block mb-2 font-semibold text-base mt-5">
             Description
@@ -90,17 +93,20 @@ function NewProject() {
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"></div>
             <input
-  type="text"
-  name="projectDesc"
-  id="projectDesc"
-  value={formData.projectDesc}
-  onChange={handleInputChange}
-  className="text-black border text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-  placeholder="Description"
-/>
+              type="text"
+              name="projectDesc"
+              id="projectDesc"
+              value={formData.projectDesc}
+              onChange={handleInputChange}
+              className="text-black border text-sm rounded-lg block w-full pl-10 p-2.5 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Description"
+            />
           </div>
+          {errors.projectDesc && (
+            <p className="text-red-500">{errors.projectDesc}</p>
+          )}
 
-          <label
+          {/* <label
             htmlFor="email-address-icon"
             className="block mb-2 mt-5 font-semibold text-base"
           >
@@ -153,15 +159,16 @@ function NewProject() {
               type="password"
               placeholder="******************"
             />
-          </div>
+          </div> */}
           <div className="mt-5 my-5">
-            <button
+            <Link
+              to="/profile"
               type="submit"
               onClick={handleSubmit}
               className="my-1 bg-blue-800 py-2 px-4 text-sm font-semibold border-0 rounded-md   hover:bg-blue-900"
             >
               <span className="">Create</span>
-            </button>
+            </Link>
           </div>
         </form>
       </div>
