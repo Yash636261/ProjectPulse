@@ -1,7 +1,11 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
+  console.log("current user:", user);
+
   const [toggle, setToggle] = useState(false);
   const [menu, setMenu] = useState(false);
   const changeToggle = () => {
@@ -24,8 +28,12 @@ function Navbar() {
         </div>
         <div className="font-semibold capitalize max-md:hidden">
           <div className="flex justify-center cursor-pointer">
-            <Link to="/" className="mx-3 hover:text-blue-300">Home</Link>
-            <Link to='/about' className="mx-3 hover:text-blue-300">about</Link>
+            <Link to="/" className="mx-3 hover:text-blue-300">
+              Home
+            </Link>
+            <Link to="/about" className="mx-3 hover:text-blue-300">
+              about
+            </Link>
             <div className="mx-3 hover:text-blue-300">contact us</div>
             <div className="mx-3 hover:text-blue-300">explore</div>
           </div>
@@ -114,15 +122,34 @@ function Navbar() {
 
           {menu && (
             <div className="absolute top-16 right-5 p-5 border-0 rounded-lg bg-black z-10">
+            {isAuthenticated && (
               <div className="flex flex-col border-b-2 py-1 break-normal border-gray-500">
-                <p>UserName</p>
-                <p>UserName@gmail.com</p>
+                <p>{user.name}</p>
+                <p>{user.email}</p>
               </div>
+            )}
 
               <div className="capitalize flex flex-col py-2">
-                <Link to="/profile" className="mx-2 my-1 hover:text-gray-300">Profile</Link>
+                <Link to="/profile" className="mx-2 my-1 hover:text-gray-300">
+                  Profile
+                </Link>
                 <div className="mx-2 my-1 hover:text-gray-300">settings </div>
-                <Link to='/login' className="mx-2 my-1 hover:text-gray-300">LogIn</Link>
+
+                {isAuthenticated ? (
+                  <button
+                    onClick={() => logout()}
+                    className="mx-2 my-1 hover:text-gray-300"
+                  >
+                    logout
+                  </button>
+                ) : (
+                  <button
+                    onClick={()=> loginWithRedirect()}
+                    className="bg-blue-600 mx-2 my-1 hover:text-gray-300"
+                  >
+                    LogIn
+                  </button>
+                )}
               </div>
             </div>
           )}
@@ -131,8 +158,12 @@ function Navbar() {
       {toggle && (
         <div className="absolute w-full bg-slate-800 text-white font-semibold md:hidden py-5">
           <div className="capitalize flex flex-col">
-            <Link to="/" className="mx-3 my-1 hover:text-blue-300">Home</Link>
-            <Link to='/about' className="mx-3 my-1 hover:text-blue-300">about </Link>
+            <Link to="/" className="mx-3 my-1 hover:text-blue-300">
+              Home
+            </Link>
+            <Link to="/about" className="mx-3 my-1 hover:text-blue-300">
+              about{" "}
+            </Link>
             <div className="mx-3 my-1 hover:text-blue-300">contact us</div>
             <div className="mx-3 my-1 hover:text-blue-300">explore</div>
           </div>
